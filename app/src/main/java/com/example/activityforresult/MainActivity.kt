@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         private const val SECOND_ACTIVITY_REQUEST_CODE = 2
 
         const val NAME = "name"
+        const val EMAIL = "email"
 
     }
 
@@ -43,7 +44,8 @@ class MainActivity : AppCompatActivity() {
             } else if(requestCode == SECOND_ACTIVITY_REQUEST_CODE){
                 if(data != null){
                     val name = data.getStringExtra(NAME)
-                    tv_second_activity_result.text = "$name"
+                    val email = data.getStringExtra(EMAIL)
+                    tv_second_activity_result.text = "$name\n$email"
                 }
 
             }
